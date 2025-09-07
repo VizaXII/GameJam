@@ -1016,6 +1016,8 @@ PlayableDirector:
     value: {fileID: 1216612193}
   - key: {fileID: 9041876147727213822, guid: 6e0773b7878abe147930aac5d9f9087d, type: 2}
     value: {fileID: 1121659768}
+  - key: {fileID: 1493438948588636354, guid: 6e0773b7878abe147930aac5d9f9087d, type: 2}
+    value: {fileID: 2014973933}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1204709853
@@ -1714,6 +1716,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917997658}
   m_CullTransparentMesh: 1
+--- !u!1 &2014973930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014973932}
+  - component: {fileID: 2014973931}
+  - component: {fileID: 2014973933}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2014973931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014973930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22867dd27e18a054181d755663416c59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimelineSceneLoader
+--- !u!4 &2014973932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014973930}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 123.43603, y: 172.82663, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014973933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014973930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Timeline::UnityEngine.Timeline.SignalReceiver
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 864066c961e6e914cb16e916554f7d0e, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2014973931}
+          m_TargetAssemblyTypeName: TimelineSceneLoader, Assembly-CSharp
+          m_MethodName: LoadScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: ANDEN_Scene
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2118291512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,3 +1935,4 @@ SceneRoots:
   - {fileID: 8284723811834435839}
   - {fileID: 1204709853}
   - {fileID: 2118291515}
+  - {fileID: 2014973932}
